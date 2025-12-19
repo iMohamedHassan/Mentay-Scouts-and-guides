@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0" stop-color="#7c4dff"/>
+      <stop offset="1" stop-color="#b98cff"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#f6f7fb"/>
+  <g transform="translate(80,80)">
+    <rect width="1040" height="640" rx="20" fill="url(#g1)" opacity="0.12"/>
+    <text x="520" y="320" font-size="36" text-anchor="middle" fill="#2b7a3a" font-family="Tajawal,Arial">فريق الكشفية — تخييم</text>
+  </g>
+</svg>

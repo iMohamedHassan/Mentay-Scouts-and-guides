@@ -1,166 +1,74 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>مجموعات منطي الكشفية</title>
-  <meta name="description" content="مجموعات منطي الكشفية – تنمية، قيادة، خدمة مجتمع بروح شبابية.">
-  <meta name="theme-color" content="#0f3d2e">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجموعات منطي الكشفية و الإرشادية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .bg-topo {
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 57c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23003366' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .wood-text {
+            color: #003366;
+            text-shadow: 1px 1px 0px rgba(255, 215, 0, 0.2);
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .animate-float {
+            animation: floating 4s ease-in-out infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        .transform-style-3d {
+            transform-style: preserve-3d;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
 </head>
-
-<body class="dark">
-
-<header class="header">
-  <div class="container header-inner">
-
-    <div class="brand">
-      <span class="logo">⛺</span>
-      <span class="site-title">مجموعات منطي</span>
-    </div>
-
-    <nav class="desktop-nav">
-      <a href="#home">الرئيسية</a>
-      <a href="#about">من نحن</a>
-      <a href="#events">الفعاليات</a>
-      <a href="#gallery">المعرض</a>
-      <a href="#join">انضم إلينا</a>
-    </nav>
-
-    <!-- Theme toggle -->
-    <button id="themeToggle" class="theme-toggle" aria-label="تغيير المظهر">
-      🌙
-    </button>
-
-    <button id="hamburger" class="hamburger" aria-label="القائمة" aria-expanded="false" aria-controls="mobileNav">
-      <span></span><span></span><span></span>
-    </button>
-
-  </div>
-</header>
-
-<!-- Mobile Menu -->
-<nav id="mobileNav" class="mobile-nav" role="dialog" aria-modal="true" aria-hidden="true">
-  <div class="mobile-overlay"></div>
-  <div class="mobile-menu">
-    <a href="#home">الرئيسية</a>
-    <a href="#about">من نحن</a>
-    <a href="#events">الفعاليات</a>
-    <a href="#gallery">المعرض</a>
-    <a href="#join">انضم إلينا</a>
-  </div>
-</nav>
-
-<main id="main" class="container">
-
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <h1>
-      نصنع <span>القادة</span><br>
-      بروح كشفية
-    </h1>
-
-    <p class="hero-sub">
-      مغامرة • مهارات • قيادة • خدمة مجتمع
-    </p>
-
-    <div class="hero-tags">
-      <span>⛺ تخييم</span>
-      <span>🧭 رحلات</span>
-      <span>🏅 تدريب</span>
-      <span>🤝 تطوع</span>
-    </div>
-
-    <button class="cta big">ابدأ رحلتك</button>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="card">
-    <h2>من نحن</h2>
-    <p>
-      مجموعات منطي الكشفية والإرشادية تهدف إلى بناء شخصية شابة
-      قادرة على القيادة، التعاون، وتحمل المسؤولية.
-    </p>
-  </section>
-
-  <!-- EVENTS -->
-  <section id="events" class="card">
-    <h2>الفعاليات القادمة</h2>
-
-    <div class="events">
-      <div class="event active">
-        <h3>معسكر الربيع</h3>
-        <p>5 – 8 أبريل</p>
-      </div>
-      <div class="event">
-        <h3>ورشة إسعافات</h3>
-        <p>18 مارس</p>
-      </div>
-      <div class="event">
-        <h3>يوم تطوعي</h3>
-        <p>2 مايو</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section id="gallery" class="card">
-    <h2>المعرض</h2>
-    <div class="gallery">
-      <img src="images/photo1.svg" alt="نشاط كشفية 1" loading="lazy">
-      <img src="images/photo2.svg" alt="نشاط كشفية 2" loading="lazy">
-      <img src="images/photo3.svg" alt="نشاط كشفية 3" loading="lazy">
-    </div>
-  </section>
-
-  <!-- JOIN -->
-  <section id="join" class="card">
-    <h2>انضم إلينا</h2>
-    <form id="joinForm" class="form" novalidate>
-      <label class="visually-hidden" for="fullName">الاسم الكامل</label>
-      <input id="fullName" name="fullName" placeholder="الاسم الكامل" required>
-
-      <label class="visually-hidden" for="age">العمر</label>
-      <input id="age" name="age" type="number" placeholder="العمر" required min="6" max="99">
-
-      <label class="visually-hidden" for="contact">الهاتف أو البريد</label>
-      <input id="contact" name="contact" placeholder="الهاتف أو البريد" required>
-
-      <button class="cta" type="submit">إرسال</button>
-    </form>
-
-    <div id="formMessage" class="form-message" role="status" aria-live="polite" hidden></div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  © 2026 مجموعات منطي الكشفية
-</footer>
-
-
-<script defer src="scripts/main.js"></script>
-
-<!-- Lightbox for gallery images -->
-<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" hidden>
-  <div class="lightbox-overlay" data-action="close" tabindex="-1"></div>
-  <div class="lightbox-inner">
-    <button class="lightbox-close" aria-label="إغلاق">✕</button>
-    <button class="lightbox-nav prev" aria-label="السابق">‹</button>
-    <img class="lightbox-img" src="" alt="">
-    <button class="lightbox-nav next" aria-label="التالي">›</button>
-  </div>
-</div>
-
-<noscript>
-  <style>.mobile-nav{display:none!important}</style>
-  <div class="no-js-note">لتجربة أفضل، يرجى تمكين JavaScript.</div>
-</noscript>
-
+<body class="bg-[#fcfbf7] text-gray-900">
+    <div id="root"></div>
+    <!-- ربط ملف الدخول الرئيسي لـ React -->
+    <script type="module" src="./index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
 </body>
 </html>

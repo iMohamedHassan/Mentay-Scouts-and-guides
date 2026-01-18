@@ -1,26 +1,20 @@
-# موقع مجموعات منطي الكشفية و الإرشادية
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-موقع مبسّط باللغة العربية يعرّف عن فرقة كشفية/إرشادية. يحتوي المشروع على:
+# Run and deploy your AI Studio app
 
-- `index.html` — الصفحة الرئيسية (RTL، محتوى عربي افتراضي).
-- `style.css` — أنماط أساسية بسيطة متوافقة مع الهواتف.
+This contains everything you need to run your app locally.
 
-مقترح المحتوى والصفحات:
+View your app in AI Studio: https://ai.studio/apps/drive/1n2d6Thegfuse-ldTX_SCIeh4tsu6fy-s
 
-- الرئيسية: ترحيب، لمحة سريعة عن الفريق.
-- من نحن: قصتنا، الرؤية، القيم، وأعضاء القيادة.
-- الفعاليات: تقويم الفعاليات القادمة، نماذج التسجيل.
-- المعرض: صور من المعسكرات والرحلات.
-- الموارد: أدلة التخييم، قوائم المعدات، دروس الإسعافات الأولية.
-- انضم إلينا: نموذج تسجيل، متطلبات العمر والانخراط.
-- اتصل بنا: بريد إلكتروني، هاتف، خرائط الموقع.
+## Run Locally
 
-اقتراحات لاحقة:
+**Prerequisites:**  Node.js
 
-- إضافة صور فعلية إلى المجلد `images/` ووصّلها في `index.html`.
-- إعداد صفحة خاصة بالأحداث مع نظام تسجيل (Google Forms أو نموذج بسيط + بريد إلكتروني).
-- تحسين الوصول: فحص تباين الألوان، إضافة وسم `alt` لكل صورة، التأكد من قابلية التنقل عبر لوحة المفاتيح.
-- نشر الموقع: استخدم GitHub Pages أو Netlify أو Vercel.
-- ترجمة/نسخة إنجليزية إن احتجت جمهور غير عربي.
 
-إذا تحب، أعدّل التصميم أو أبني صفحة حدث/معرض تفاعلية كاملة الآن.
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

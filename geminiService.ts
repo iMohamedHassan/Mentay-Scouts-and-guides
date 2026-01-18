@@ -1,9 +1,22 @@
 
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+const getApiKey = () => {
+  try {
+    return process.env.API_KEY || '';
+  } catch {
+    return '';
+  }
+};
+
+const ai = new GoogleGenAI({ apiKey: getApiKey() });
 
 export async function askScoutAssistant(question: string) {
+  const apiKey = getApiKey();
+  if (!apiKey) {
+    return "عذراً، مساعد الذكاء الاصطناعي غير مهيأ حالياً. يرجى التأكد من إعداد مفتاح API.";
+  }
+
   try {
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',

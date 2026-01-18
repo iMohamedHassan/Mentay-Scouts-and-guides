@@ -4,10 +4,18 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  define: {
+    'process.env': process.env
+  },
   server: {
     port: 3000
   },
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      }
+    }
   }
 });

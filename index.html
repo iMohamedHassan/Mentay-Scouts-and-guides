@@ -44,22 +44,24 @@
         .animate-fade-in-up {
             animation: fadeInUp 0.5s ease-out forwards;
         }
-        .perspective-1000 {
-            perspective: 1000px;
-        }
-        .transform-style-3d {
-            transform-style: preserve-3d;
-        }
+        .perspective-1000 { perspective: 1000px; }
+        .transform-style-3d { transform-style: preserve-3d; }
     </style>
-<script type="importmap">
+    <script>
+        // تعريف process.env لمنع انهيار الموقع في المتصفح
+        window.process = { env: { API_KEY: "" } };
+    </script>
+    <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "@google/genai": "https://esm.sh/@google/genai@1.37.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
     "react/": "https://esm.sh/react@^19.2.3/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
-    "vite": "https://esm.sh/vite@^7.3.1",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "vite": "https://esm.sh/vite@^7.3.1"
   }
 }
 </script>
@@ -67,7 +69,6 @@
 </head>
 <body class="bg-[#fcfbf7] text-gray-900">
     <div id="root"></div>
-    <!-- ربط ملف الدخول الرئيسي لـ React -->
     <script type="module" src="./index.tsx"></script>
 <script type="module" src="/index.tsx"></script>
 </body>
